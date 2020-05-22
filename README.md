@@ -28,3 +28,6 @@ There you can check number even or odd.
 ## 4.. Last part of template
 This is all country which consist of Flag, Name, Population, Code, Phone Number and so on
 ![image](https://user-images.githubusercontent.com/55210294/82699251-59d1fb00-9c7d-11ea-8871-38383376f01b.png)
+
+İn this part I differentiate AZERBAİJAN blue color.
+![image](https://user-images.githubusercontent.com/55210294/82699846-76bafe00-9c7e-11ea-929b-543c46b8d44e.png)
