@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <style>
+      
+      .kare-button {
+        width:95px;
+        height:100px;
+        line-height: 100px;
+        margin: 6px;
+        border: 2px solid red;
+        background-color: crimson;
+      }
+    </style>
+</head>
+<body>
+    <!-- <div class="mainBox">
+        <div class="childBox"></div>
+        <div class="childBox" style="margin-left: 20px;"></div> 
+
+    </div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#country">Country API</a>
+            </li>
+
+            <li class="nav-item">
+                <span class="nav-link" href="#" id="date"></span>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" id="result"></a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <!----------Container Part----------------->
+<div class="container mt-3">
+  <div class="container">
+    <h3>1. Javascript Date property</h3>
+<button type="button" class="btn btn-success">Year: <span id="year"></span></button>
+<button type="button" class="btn btn-success">Month: <span id="month"></span></button>
+<button type="button" class="btn btn-success">Day: <span id="day"></span></button>
+<button type="button" class="btn btn-success">Hours: <span id="hour"></span></button>
+<button type="button" class="btn btn-success">Minutes: <span id="minute"></span></button>
+<button type="button" class="btn btn-info">Seconds: <span id="second"></span></button>
+<button type="button" class="btn btn-danger" onclick="stopSecond()">Stop</button>
+</div>
+<!---------Tap 2-------->
+<div class="container mt-3">
+  <hr>
+  <h3>2. Calculate factorial of any numbers </h3>
+  <div class="input-group mb-3">
+    <input type="number" class="form-control" id="deger" placeholder="Write Number" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-primary" type="button" id="button-addon2" onclick="calculateFactorial()">Calculate</button>
+    </div>
+  </div>
+  <div class="alert alert-danger" id="factorresult" role="alert" style="display: none;"></div>
+</div>
+
+
+<!---------------Tap 3 Todo app-------------------------->
+<div class="container mt-3">
+  <hr>
+  <h3>3. Add Todo list</h3>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="gettext" placeholder="Write Something......" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-success" type="button" id="button-addon2" onclick="addTodoText()">Add</button>
+    </div>
+  </div>
+  <ol class="alert alert-success" id="todoresult" role="alert" style="display: none;"></ol>
+</div>
+
+<!----------------------Tap 4------------------------------------------->
+<div class="container mt-3">
+  <hr>
+  <h3>4. Change Dollar($) to Manat</h3>
+  <div class="input-group mb-3">
+    <input type="number" class="form-control" id="getdollar" placeholder="Write Dollar and change Manat" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" id="button-addon2" onclick="changeMoney()">Change</button>
+    </div>
+  </div>
+  <ol class="alert alert-warning" id="moneyresult" role="alert" style="display: none;">
+    <b style="color:red; font-weight: bold;">Note:1 Dollar($) is calculating as 1.70 qepik</b>
+  </ol>
+  
+</div>
+
+<!-----------------Tap 5------------------>
+
+<div class="container mt-3">
+  <hr>
+  <h3>5. Math Calculator</h3>
+  <form class="mb-3">
+    <div class="row">
+      <div class="col">
+        <input type="number" id="number1" class="form-control" placeholder="Number1.....">
+      </div>
+      <div class="col">
+        <input type="number" id="number2" class="form-control" placeholder="Number2....">
+      </div>
+    </div>
+  </form>
+
+  <ol class="alert alert-primary" id="matresult" role="alert" style="display: none;"></ol>
+
+  <button type="button" class="btn btn-outline-primary p-2" onclick="addTwoNumbers()">Add</button>
+<button type="button" class="btn btn-outline-secondary p-2" onclick="subtractTwoNumbers()">Subtraction</button>
+<button type="button" class="btn btn-outline-success p-2" onclick="multTwoNumbers()">Multiplication</button>
+<button type="button" class="btn btn-outline-danger p-2" onclick="divideTwoNumbers()">Divide</button>
+</div>
+
+<!------------Tap 6 Show and Hide------------>
+<div class="container">
+<hr>
+<h3>6. Show and Hide with JS</h3>
+<img src="https://cdn.pixabay.com/photo/2014/10/18/22/15/rose-hip-493784_640.jpg" alt="Nature" width="450" height="200" id="picture"> <br>
+<button type="button" class="btn btn-outline-danger mt-2" onclick="showHide()">Show & Hide</button>
+</div>
+
+<!------------Tap 7 Show and Hide Advanced------------>
+<div class="container">
+  <hr>
+  <h3>7.Show and Hide Advanced with JS</h3>
+  <button type="button" class="btn btn-warning btn-lg btn-block mb-3" onclick="showComment()">Add comment</button>
+  
+  <div id="commentInput" style="display: none;">
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name" id="yourName">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" id="yourLastName">
+        </div>
+      </div>
+    </form>
+  <div class="input-group mt-2">
+    <input type="text" class="form-control" id="comment" placeholder="Write Your comments" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" id="button-addon2" onclick="addComment()">Add +</button>
+    </div>
+  </div>
+  <ol class="alert alert-primary mt-2" id="commentresult" role="alert" style="display: none;"></ol>
+  </div>
+</div>
+  <!-------------Tap 8 Add New button-------------------->
+  <div class="container">
+<hr>
+<h3>8. Add new button</h3>
+<button type="button" id="addbtn" class="btn btn-info btn-lg btn-block mb-3">Add New Buttton</button>
+<div id="panel"></div>
+</div>
+
+
+<!--------------tap 9 Creat table wıth js database--------------------------->
+<div class="container">
+  <hr>
+  <h3>9. Personal Information</h3>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Name</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Write Your Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Surname</label>
+        <input type="text" class="form-control" id="inputSurname" placeholder="Write Your Surname">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="Write Your City">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Profession</label>
+        <input type="text" class="form-control" id="inputProfession" placeholder="Write Your Profession">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Age</label>
+        <input type="number" class="form-control" max="100" id="inputAge" placeholder="Write Your Age">
+      </div>
+    </div>
+    
+    
+  </form>
+  <button class="btn btn-success" id="validatePersInf">Add To Table</button>
+
+  <table class="table table-dark mt-3" id="liste">
+    <thead>
+      <tr>
+        
+        <th scope="col">Name</th>
+        <th scope="col">Surname</th>
+        <th scope="col">City</th>
+        <th scope="col">Profession</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    
+    </tbody>
+  </table>
+</div> 
+
+
+
+<!--------Tap10-------->
+<div class="container mt-3">
+  <hr>
+  <h3>10.  Is number old or even? </h3>
+  <div class="input-group mb-3">
+    <input type="number" class="form-control" id="degerOE" placeholder="Write Number" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-primary" type="button" id="oddOrEven">Check</button>
+    </div>
+  </div>
+  <ol class="alert alert-danger" id="oddevenresult" role="alert" style="display: none;"></ol>
+</div>
+
+
+<!----------Tap 11---------------------------->
+
+
+    <div class="container">
+      <hr>
+      <div id="country">
+  <h3>11.  Countries With API </h3>
+      </div>
+      <table class="table table-stripped mt-3">
+        <thead class="thead-dark">
+          <tr>
+             <th>Flag</th>
+            <th>Country</th>
+            <th>Capital</th>
+            <th>Population</th>
+            <th>Code</th>
+            <th>Region</th>
+            <th>Phone Code</th>
+        
+          </tr>
+        </thead>
+        <tbody id="data">
+         
+        </tbody>
+      </table>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/es6.js"></script>
+
+</body>
+</html>
