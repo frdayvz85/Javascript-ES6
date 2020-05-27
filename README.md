@@ -1,10 +1,11 @@
 # Javascript-ES6
-I have learned Advanced Javascript and also created some mini project during this time.
+I have learned Advanced Javascript and also created some mini project during this time. <br/>
+*So, in my view this is simple and easy because I used Bootstrap for cool view. You can download and get enjoy*
 
 ## 1..This is first part of template
 ![image](https://user-images.githubusercontent.com/55210294/82695478-3b1c3600-9c76-11ea-95c4-f185dfd679aa.png)
 
-So First I creaeted Factorial calculator that you can calculate factorial of any number, and Second is Simple todo list which you can write anything and can add. and another is Change dollar to manat which 1 dollar ($) is calculating as 1.70 qep.
+So First I creaeted Factorial calculator that you can calculate factorial of any number, and Second is Simple todo list which you can write anything and can add. And another is Change dollar to manat which 1 dollar ($) is calculating as 1.70 coin(qep).
 ![image](https://user-images.githubusercontent.com/55210294/82695884-05c41800-9c77-11ea-9d7f-46feb2753471.png)
 
 ## 2..This is another part of template
@@ -19,7 +20,7 @@ In the second part I created Calculator which you can Add, Subtraction, Multipli
 ## 3..This is another part of template
 ![image](https://user-images.githubusercontent.com/55210294/82698303-97358900-9c7b-11ea-99b1-dffd60c3636f.png)
 
-İn this section I created Add new button when you click button add new button also increrase number respectively, and You can add personal Informatıon to table but you can write your Name, Surname, Age, Profession and City that also you can pass any one.
+İn this section I created Add new button when you click button add new button also increase number respectively, and You can add personal Informatıon to table but you can write your Name, Surname, Age, Profession and City that also you can pass any one.
 ![image](https://user-images.githubusercontent.com/55210294/82698462-db288e00-9c7b-11ea-9732-e77954e44870.png)
 
 There you can check number even or odd.
